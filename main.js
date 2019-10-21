@@ -2,15 +2,15 @@ const exec = require('child_process').exec;
 const fs = require('fs');
 
 function main(params) {
-    
+
     // Out with the old package...
-    fs.unlinkSync('./package.json')
-    
+    fs.unlinkSync('./package.json');
+
     // In with the new!
     fs.writeFileSync('./package.json', `{"name": "hello-world","version": "1.0.0","description": "","main": "index.js","keywords": [],"author": "","license": "ISC","dependencies": {"express": "^4.17.1"}}`);
-    
+
     return new Promise( (resolve, reject) => {
-            
+
             // Install dependencies
             exec('npm i', (error, stdout, stderr) => {
                 if (error) {
@@ -21,7 +21,7 @@ function main(params) {
                 console.error(`stderr: ${stderr}`);
                 resolve();
             });
-            
+
         })
         .then(result => {
 
@@ -45,7 +45,7 @@ function main(params) {
         .catch(err => {
             reject(err);
         })
-    
+
     ;
-    
+
 }
