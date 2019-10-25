@@ -5,10 +5,14 @@ function main(params) {
     
     const queryParams = {};
     
-    params.__ow_query.split('&').forEach(pair => {
-       const parts = pair.split('=');
-       queryParams[parts[0]] = parts[1];
-    });
+    if(params.__ow_query){
+        
+        params.__ow_query.split('&').forEach(pair => {
+            const parts = pair.split('=');
+            queryParams[parts[0]] = parts[1];
+         });
+
+    }
 
     if(!queryParams.secret){
         
