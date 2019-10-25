@@ -7,7 +7,7 @@ A serverless function for compiling Node.js dependencies for serverless function
 
 ### The Problem
 
-Serverless functions are great, but for some functions, shipping dependencies + packages that makes your life easier is a little tricky. 
+Serverless functions are great, but for some functions, shipping dependencies + packages that make your life easier is a little tricky. 
 
 If all of your dependencies are written in pure JS, you're pretty set to go, you just need to install them, zip them up, and send them on your way. 
 
