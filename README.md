@@ -9,15 +9,15 @@ A serverless function for compiling Node.js dependencies for serverless function
 
 Serverless functions are great, but for some functions, shipping dependencies + packages that make your life easier is a little tricky. 
 
-If all of your dependencies are written in pure JS, you're pretty set to go, you just need to install them, zip them up, and send them on your way. 
+If all of your dependencies are written in pure JS, you're pretty set to go, you just need to install them, zip them up, and send them on their way. 
 
-But, if one or more of your dependencies have a native component, you're in trouble. If you're lucky to be running the same operating system as the environment you're planning to deploy your serverless function to, you're good to go, but this is often not the case - and installing Docker images to compile dependencies is a nightmare too.
+But, if one or more of your dependencies have a native component, you're in trouble. If you're lucky enough to be running the same operating system as the environment you're planning to deploy your serverless function to, you're good to go, but this is often not the case - and installing Docker images to compile dependencies is a nightmare too.
 
 ### A Solution
 
 With this function, you can send up your `package.json` file for your serverless project where they'll be installed, zipped up, and returned to you for deployment.
 
-This way, your compiling your dependencies in the exact environment you'll be shipping your function to.
+This way, you'll be compiling your dependencies in the exact same environment you'll be shipping your function to.
 
 ## It can't be that simple...
 
